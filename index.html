@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, China</title>
+    <style>
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .body {
+            width: 35em;
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .core-text {
+            font-weight: 900;
+            font-size: 18pt;
+        }
+    </style>
+</head>
+
+<body>
+<div class="body">
+
+    <h1>Welcome to Personal website !</h1>
+    <p>
+        <em>Hello,I am from China, nice to meet you.</em>
+    </p>
+    <h2 class="center">社会主义核心价值观</h2>
+    <hr>
+    <p class="center core-text">
+        富强、民主、文明、和谐
+        <br>
+        自由、平等、公正、法治
+        <br>
+        爱国、敬业、诚信、友善
+    </p>
+    <p class="core-text">
+        富强（Prosperity）、民主（Democracy)
+        <br>
+        文明（Civility）、和谐（Harmony）
+        <br>
+        自由（Freedom）、平等（Equality）
+        <br>
+        公正（Justice）、法治（Rule of Law）
+        <br>
+        爱国（Patriotism）、敬业（Dedication）
+        <br>
+        诚信（Integrity）、友善（Friendship）
+    </p>
+    <p>
+        <a href="https://zh.wikipedia.org/wiki/%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82">维基百科(wikipedia)：社会主义核心价值观</a>
+    </p>
+    <p>
+        <a href="https://baike.baidu.com/item/%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82/3271832">百度百科(baidu-baike)：社会主义核心价值观</a>
+    </p>
+    <p>
+        <a href="https://baike.baidu.com/item/%E5%BA%86%E7%A5%9D%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%88%90%E7%AB%8B70%E5%91%A8%E5%B9%B4">百度百科(baidu-baike)：庆祝中华人民共和国成立70周年</a>
+    </p>
+    <p class="center">
+        <img src="http://pic.51yuansu.com/pic3/cover/00/79/48/58c74d683a782_610.jpg"></p>
+    <h3 class="center">我和我的祖国</h3>
+    <audio controls="controls" autoplay loop style="width:100%;">
+        <source src="http://m10.music.126.net/20191017204754/32dc34f08ef1a31d6f49b787cea48848/ymusic/9170/a68d/c722/330e24de55c714e2c6e2a1525bf35101.mp3"
+                type="audio/mp3" />
+        浏览器可能需要安装插件以后，才能播放该歌曲
+    </audio>
+    <div class="center">
+        <h4>我和我的祖国</h4>
+        <p class="">作词：张藜</p>
+        <p class="">作曲：秦咏诚</p>
+        <p class="">我和我的祖国</p>
+        <p class="">一刻也不能分割</p>
+        <p class="">无论我走到哪里</p>
+        <p class="">都流出一首赞歌</p>
+        <p class="">我歌唱每一座高山</p>
+        <p class="">我歌唱每一条河</p>
+        <p class="">袅袅炊烟</p>
+        <p class="">小小村庄</p>
+        <p class="">路上一道辙</p>
+        <p class="">我最亲爱的祖国</p>
+        <p class="">我永远紧依着你的心窝</p>
+        <p class="">你用你那</p>
+        <p class="">母亲脉搏和我诉说</p>
+        <p class="">我的祖国和我</p>
+        <p class="">像海和浪花一朵</p>
+        <p class="">浪是那海的赤子</p>
+        <p class="">海是那浪花依托</p>
+        <p class="">每当大海在微笑</p>
+        <p class="">我就是笑的旋涡</p>
+        <p class="">我分担着海的忧愁</p>
+        <p class="">分享海的欢乐</p>
+        <p class="">我最亲爱的祖国</p>
+        <p class="">你是大海永不干涸</p>
+        <p class="">永远给我</p>
+        <p class="">碧浪清波</p>
+        <p class="">心中的歌</p>
+        <p class="">我最亲爱的祖国</p>
+        <p class="">你是大海永不干涸</p>
+        <p class="">永远给我</p>
+        <p class="">碧浪清波</p>
+        <p class="">心中的歌</p>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.2.1.min.js"></script>
+<script type="text/javascript">
+    /* 鼠标特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+      $('body').click(function (e) {
+        var a = ['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善'];
+        var $i = $('<span/>').text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+          y = e.pageY;
+        $i.css({
+          'z-index': 999999999999999999999999999999999999999999999999999999999999999999999,
+          'top': y - 20,
+          'left': x,
+          'position': 'absolute',
+          'font-weight': 'bold',
+          'color': '#ff6651',
+        });
+        $('body').append($i);
+        $i.animate({
+            'top': y - 180,
+            'opacity': 0,
+          },
+          1500,
+          function () {
+            $i.remove();
+          });
+      });
+    });
+</script>
+</body>
+
+</html>
