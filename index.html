@@ -25,6 +25,39 @@
             font-weight: 900;
             font-size: 18pt;
         }
+
+        .text-cn-en {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .text-cn-en li{
+            margin: 0;
+            padding: 0;
+            width: 50%;
+        }
+        .text-cn-en li:nth-of-type(even){
+            text-align: right;
+        }
+        .text-cn-en li .text-cn {
+            font-weight: 900;
+            font-size: 18pt;
+        }
+        .text-cn-en li .text-en {
+            font-weight: 500;
+            font-size: 12pt;
+            color: rgba(50,50,50,1);
+        }
+        .text-cn-en li .text-en:before{
+            content: '';
+        }
+        .text-cn-en li .text-en:after{
+            content: '';
+        }
     </style>
 </head>
 
@@ -33,7 +66,7 @@
 
     <h1>Welcome to Personal website !</h1>
     <p>
-        <em>Hello,I am from China, nice to meet you.</em>
+        <em>Hello, I am from China, nice to meet you.</em>
     </p>
     <h2 class="center">社会主义核心价值观</h2>
     <hr>
@@ -44,19 +77,56 @@
         <br>
         爱国、敬业、诚信、友善
     </p>
-    <p class="core-text">
-        富强（Prosperity）、民主（Democracy)
-        <br>
-        文明（Civility）、和谐（Harmony）
-        <br>
-        自由（Freedom）、平等（Equality）
-        <br>
-        公正（Justice）、法治（Rule of Law）
-        <br>
-        爱国（Patriotism）、敬业（Dedication）
-        <br>
-        诚信（Integrity）、友善（Friendship）
-    </p>
+    <ul class="text-cn-en">
+        <li>
+            <span class="text-cn">富强</span>
+            <span class="text-en">Prosperity</span>
+        </li>
+        <li>
+            <span class="text-en">Democracy</span>
+            <span class="text-cn">民主</span>
+        </li>
+        <li>
+            <span class="text-cn">文明</span>
+            <span class="text-en">Civility</span>
+        </li>
+        <li>
+            <span class="text-en">Harmony</span>
+            <span class="text-cn">和谐</span>
+        </li>
+        <li>
+            <span class="text-cn">自由</span>
+            <span class="text-en">Freedom</span>
+        </li>
+        <li>
+            <span class="text-en">Equality</span>
+            <span class="text-cn">平等</span>
+        </li>
+        <li>
+            <span class="text-cn">公正</span>
+            <span class="text-en">Justice</span>
+        </li>
+        <li>
+            <span class="text-en">Rule of Law</span>
+            <span class="text-cn">法治</span>
+        </li>
+        <li>
+            <span class="text-cn">爱国</span>
+            <span class="text-en">Patriotism</span>
+        </li>
+        <li>
+            <span class="text-en">Dedication</span>
+            <span class="text-cn">敬业</span>
+        </li>
+        <li>
+            <span class="text-cn">诚信</span>
+            <span class="text-en">Integrity</span>
+        </li>
+        <li>
+            <span class="text-en">Friendship</span>
+            <span class="text-cn">友善</span>
+        </li>
+    </ul>
     <p>
         <a href="https://zh.wikipedia.org/wiki/%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82">维基百科(wikipedia)：社会主义核心价值观</a>
     </p>
@@ -67,11 +137,10 @@
         <a href="https://baike.baidu.com/item/%E5%BA%86%E7%A5%9D%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%88%90%E7%AB%8B70%E5%91%A8%E5%B9%B4">百度百科(baidu-baike)：庆祝中华人民共和国成立70周年</a>
     </p>
     <p class="center">
-        <img src="http://pic.51yuansu.com/pic3/cover/00/79/48/58c74d683a782_610.jpg"></p>
+        <img src="./img/Tiananmen.jpg"></p>
     <h3 class="center">我和我的祖国</h3>
     <audio controls="controls" autoplay loop style="width:100%;">
-        <source src="http://m10.music.126.net/20191017204754/32dc34f08ef1a31d6f49b787cea48848/ymusic/9170/a68d/c722/330e24de55c714e2c6e2a1525bf35101.mp3"
-                type="audio/mp3" />
+        <source src="./media/Me-And-My-Country-music-128kbps.mp3" type="audio/mp3" />
         浏览器可能需要安装插件以后，才能播放该歌曲
     </audio>
     <div class="center">
@@ -111,15 +180,17 @@
         <p class="">心中的歌</p>
     </div>
 </div>
-<script src="http://code.jquery.com/jquery-1.2.1.min.js"></script>
+<script src="./js/jquery-1.2.1.min.js"></script>
 <script type="text/javascript">
     /* 鼠标特效 */
     var a_idx = 0;
     jQuery(document).ready(function ($) {
       $('body').click(function (e) {
-        var a = ['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善'];
-        var $i = $('<span/>').text(a[a_idx]);
-        a_idx = (a_idx + 1) % a.length;
+        var textCN = ['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善'];
+        var textEN = ['Prosperity', 'Democracy', 'Civility', 'Harmony', 'Freedom', 'Equality', 'Justice', 'Rule of Law', 'Patriotism', 'Dedication', 'Integrity', 'Friendship'];
+
+        var $i = $('<span/>').text(textCN[a_idx]);
+        a_idx = (a_idx + 1) % textCN.length;
         var x = e.pageX,
           y = e.pageY;
         $i.css({
